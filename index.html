@@ -5,11 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
         <link rel="stylesheet" href="style.css">
         <title>AAL Photography</title>
     </head>
+
     <body class="grey lighten-5">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 
         <!-Navigation->
         <nav style="padding-bottom: 120px; padding-left: 50px; padding-right: 50px">
@@ -24,5 +27,77 @@
         </nav>
 
         <!-Slideshow->
+        <div class="overlay-image carousel carousel-slider center">
+            <a class="carousel-item" href="#one!">
+                <img style="position: relative" src="images/Canada/Canada1.jpg">
+                <div class="text">ATMOSPHERIC LANDSCAPE PHOTOGRAPHY</div>
+            </a>
+            <a class="carousel-item" href="#two!">
+                <img style="position: relative" src="images/Canada/Canada2.jpg">
+                <div class="text">ATMOSPHERIC LANDSCAPE PHOTOGRAPHY</div>
+            </a>
+            <a class="carousel-item" href="#three!">
+                <img style="position: relative" src="images/Canada/Canada3.jpg">
+                <div class="text">ATMOSPHERIC LANDSCAPE PHOTOGRAPHY</div>
+            </a>
+        </div>
+        <script>
+            // CAROUSEL
+            $('.carousel').carousel({
+                fullWidth: true,
+            });
+            autoplay();
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 4500);
+            }
+        </script>
+
+        <!-Paragraph after slideshow->
+        <div class="flow-text center" style="margin-top: 300px; margin-bottom: 300px">
+            <p>I am a student of computer systems at Riga Technical University and this is a website made by me which is intended for the bachelor's thesis.</p>
+            <p>All images were selected at random and i don't take any credit for them.</p>
+        </div>
+
+        <!-Container with link to forum->
+        <div>
+            <img style="position: absolute; width: 100vw; height: 60vh; object-fit: cover" src="images/Iceland/Iceland1.jpg">
+            <div class="row">
+                <h4 class="col s4 push-s8 white-text" style="position: relative; margin-top: 200px">Find Out About Recent Industry News Articles Of Interest</h4>
+            </div>
+            <div class="row">
+                <h5 class="col s4 push-s8 white-text">A Forum covering news, reviews and random thoughts on
+                    landscape photography. I love to hear what you think so join in the discussion and leave a comment.</h5>
+            </div>
+            <div class="row">
+                <a href="https://www.thephotoforum.com" class="col s1 push-s9 waves-effect waves-light btn">FIND OUT MORE</a>
+            </div>
+        </div>
+
+        <!-Partners->
+        <h2 class="center" style="margin-top: 200px">Partners</h2>
+        <div class="row" style="margin-top: 50px; margin-bottom: 50px">
+            <div class="col s2 push-s2">
+                <a href="http://www.leefilters.com"><img src="images/leefilters.png" alt="Lee Filters logo"></a>
+            </div>
+            <div class="col s2 push-s3">
+                <a href="https://shop.fstopgear.com"><img src="images/fstop.png" alt="F-stop logo"></a>
+            </div>
+            <div class="col s2 push-s4">
+                <a href="https://www.naturefirstphotography.org/en/home"><img src="images/nature.png" alt="Nature First logo"></a>
+            </div>
+        </div>
     </body>
+
+    <!-Footer->
+    <footer class="page-footer black">
+        <div class="row">
+            <ul>
+                <li class="col"><a class="grey-text text-lighten-3" href="https://www.facebook.com/!">Facebook</a></li>
+                <li class="col"><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
+                <li class="col"><a class="grey-text text-lighten-3" href="https://www.instagram.com/">Instagram</a></li>
+                <li class="col"><a class="grey-text text-lighten-3" href="mailto:********@gmail.com">E-mail</a></li>
+            </ul>
+        </div>
+    </footer>
 </html>
